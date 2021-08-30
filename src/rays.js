@@ -68,10 +68,10 @@ export default class Rays{
         let x = 0, len, brightness, colour;
 
         this.rays.forEach(ray => {
-            
+
             len = Math.max(this.canvas.h * (10 / (ray.len)), 0); //length of ray on screen
 
-            brightness = 1 - Math.min((Math.pow(ray.steps, 1.25) / this.stepLimit), 1);
+            brightness = 1 - Math.min((Math.pow(ray.steps, 1) / this.stepLimit), 1);
 
             colour = ray.colour;
 
