@@ -1,3 +1,5 @@
-![ezgif-6-c8c09a31fc70](https://user-images.githubusercontent.com/45922387/131374335-49c8aa67-addf-49c6-80dc-e3e2dfacd86e.gif)
 # Raycaster DOOM
 Doom-inspired raycasted maze-solving game using spheretracing
+![ezgif-6-c8c09a31fc70](https://user-images.githubusercontent.com/45922387/131374335-49c8aa67-addf-49c6-80dc-e3e2dfacd86e.gif)
+# My spheretracing visualised
+![ezgif-6-4aada2e2dfbd](https://user-images.githubusercontent.com/45922387/131374484-35d48692-887e-4e8d-b78c-85ce60cc8d4d.gif)
