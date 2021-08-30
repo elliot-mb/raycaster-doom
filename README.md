@@ -1,2 +1,2 @@
-# raycaster-doom
-doom-inspired raycasted maze-solving game using intersection-based raycasting without raymarching
+# Raycaster DOOM
+Doom-inspired raycasted maze-solving game using intersection-based raycasting without raymarching.
