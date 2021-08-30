@@ -3,10 +3,10 @@ export default class Player{
     constructor(){
 
         this.heading = 0;
-        this.pos = {x: 0, y: 0};
+        this.pos = {x: 10, y: 10};
         this.vel = {r: 0, l: 0}; //angular (rotational), linear
-        this.speed = {r: 0.00001, l: 0.0005};
-        this.friction = 0.1;
+        this.speed = {r: 0.00002, l: 0.001};
+        this.friction = 0.2;
 
         this.input = { w: 0, s: 0, a: 0, d: 0, //keeps track of control key states
                        r: 0, l: 0 };
@@ -39,8 +39,6 @@ export default class Player{
     }
 
     update(dt){
-
-        console.log(this.input);
 
         //modify angular and linear velocity whilst slowing with no input
         this.vel.r = (1 - this.friction) * (this.vel.r + (this.input.r * dt * this.speed.r)); 
