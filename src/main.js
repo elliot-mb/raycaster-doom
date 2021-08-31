@@ -10,10 +10,13 @@ var ctx = canvas.getContext("2d"); //sets renderer context
 let dt = 0, pt = 0;
 let rays = new Rays({w: canvas.width, h: canvas.height});
 let player = new Player();
-let maze = new Maze(25, 25, [1, 1]);
+let maze = new Maze(20, 20, [19, 1]);
 
 maze.initialize();
 maze.generate();
+
+maze.cells[1][1] = true; 
+maze.cells[maze.cells.length - 2][maze.cells[0].length - 2] = true; 
 
 let scene = {objects: [], size: 12, w: 0, h: 0};
 
@@ -24,11 +27,19 @@ for(let j = 1; j < maze.cells.length - 1; j++){
     for(let i = 1; i < maze.cells[j].length - 1; i++){
 
         if(!maze.cells[j][i]){
-            scene.objects.push(new Rect(
-                {x: i * scene.size, y: j * scene.size}, 
-                {r: Math.random() * 255, g: Math.random() * 255, b: Math.random() * 255}, 
-                {w: scene.size, h: scene.size}
-                ));
+            if(Math.random() >= 0.5){
+                scene.objects.push(new Rect(
+                    {x: i * scene.size, y: j * scene.size}, 
+                    {r: Math.random() * 255, g: Math.random() * 255, b: Math.random() * 255}, 
+                    {w: scene.size, h: scene.size}
+                    ));
+            }else{
+                scene.objects.push(new Circle(
+                    {x: i * scene.size, y: j * scene.size}, 
+                    {r: Math.random() * 255, g: Math.random() * 255, b: Math.random() * 255}, 
+                    scene.size/(Math.random() + 2)
+                    ));
+            }
         }
     }
 }

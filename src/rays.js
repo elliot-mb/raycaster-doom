@@ -5,8 +5,8 @@ export default class Rays{
         this.fov = Math.PI/1.5;
         this.instance = canvas.w;
         this.rays = []; //rays are simple object with only a start and an end (a line segment)
-        this.stepLimit = 25; //maximum distance calculations per ray
-        this.viewDistance = 50; 
+        this.stepLimit = 30; //maximum distance calculations per ray
+        this.viewDistance = 200; 
         this.canvas = canvas;
 
     }

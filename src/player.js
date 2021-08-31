@@ -5,7 +5,7 @@ export default class Player{
         this.heading = 0;
         this.pos = {x: -15, y: 15};
         this.vel = {r: 0, l: 0}; //angular (rotational), linear
-        this.speed = {r: 0.00012, l: 0.0005};
+        this.speed = {r: 0.0012, l: 0.01};
         this.friction = 0.3;
 
         this.input = { w: 0, s: 0, a: 0, d: 0, //keeps track of control key states
@@ -43,8 +43,8 @@ export default class Player{
     update(dt, scene){
 
         //modify angular and linear velocity whilst slowing with no input
-        this.vel.r = (1 - this.friction) * (this.vel.r + (this.input.r * dt * this.speed.r)); 
-        this.vel.l = (1 - this.friction) * (this.vel.l + (this.input.l * dt * this.speed.l)); 
+        this.vel.r = (1 - this.friction) * (this.vel.r + (this.input.r * this.speed.r)); 
+        this.vel.l = (1 - this.friction) * (this.vel.l + (this.input.l * this.speed.l)); 
 
         this.heading += this.vel.r * dt;
 
