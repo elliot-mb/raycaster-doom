@@ -1,5 +1,6 @@
 # Raycaster DOOM
 Doom-inspired raycasted maze-solving game using spheretracing.\
+If framerate is unsatisfactory, try running the website in chrome.\
 WSAD controls; [try it out.](https://elliot-mb.github.io/projects/raytracing/index.html)\
 \
 ![ezgif-6-0794d3905cbd](https://user-images.githubusercontent.com/45922387/131433858-f8e8c512-8eef-485c-8d26-edfbd68e5868.gif)
